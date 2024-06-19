@@ -1,0 +1,316 @@
+|PlacaDeInduccion
+LEDS[0] <= Joiner:inst14.vector_resultante[0]
+LEDS[1] <= Joiner:inst14.vector_resultante[1]
+LEDS[2] <= Joiner:inst14.vector_resultante[2]
+LEDS[3] <= Joiner:inst14.vector_resultante[3]
+LEDS[4] <= Joiner:inst14.vector_resultante[4]
+LEDS[5] <= Joiner:inst14.vector_resultante[5]
+LEDS[6] <= Joiner:inst14.vector_resultante[6]
+LEDS[7] <= Joiner:inst14.vector_resultante[7]
+Encendido => Joiner:inst14.LED_ENCENDIDO
+Encendido => MiniDin:inst2.encendido
+Encendido => CambioZonas:inst1.encendido
+DIN1 => MiniDin:inst2.DIN1
+DIN2 => MiniDin:inst2.DIN2
+DIN3 => MiniDin:inst2.DIN3
+K1 => CambioZonas:inst1.K1
+K0 => Potencia:inst4.K0
+K0 => Tiempo:inst10.K0
+clk => EstablecerTiempo:inst11.clk
+clk => GeneradorSenal:inst6.clk
+
+
+|PlacaDeInduccion|Joiner:inst14
+vector_potencia_tiempo[0] => vector_resultante[1].DATAIN
+vector_potencia_tiempo[1] => vector_resultante[2].DATAIN
+vector_potencia_tiempo[2] => vector_resultante[3].DATAIN
+vector_potencia_tiempo[3] => vector_resultante[4].DATAIN
+vector_potencia_tiempo[4] => vector_resultante[5].DATAIN
+vector_potencia_tiempo[5] => vector_resultante[6].DATAIN
+vector_potencia_tiempo[6] => vector_resultante[7].DATAIN
+LED_ENCENDIDO => vector_resultante[0].DATAIN
+vector_resultante[0] <= LED_ENCENDIDO.DB_MAX_OUTPUT_PORT_TYPE
+vector_resultante[1] <= vector_potencia_tiempo[0].DB_MAX_OUTPUT_PORT_TYPE
+vector_resultante[2] <= vector_potencia_tiempo[1].DB_MAX_OUTPUT_PORT_TYPE
+vector_resultante[3] <= vector_potencia_tiempo[2].DB_MAX_OUTPUT_PORT_TYPE
+vector_resultante[4] <= vector_potencia_tiempo[3].DB_MAX_OUTPUT_PORT_TYPE
+vector_resultante[5] <= vector_potencia_tiempo[4].DB_MAX_OUTPUT_PORT_TYPE
+vector_resultante[6] <= vector_potencia_tiempo[5].DB_MAX_OUTPUT_PORT_TYPE
+vector_resultante[7] <= vector_potencia_tiempo[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|Clasificador:inst9
+pulso_potencia[0] => Equal0.IN3
+pulso_potencia[1] => Equal0.IN2
+pulso_potencia[2] => Equal0.IN1
+pulso_potencia[3] => Equal0.IN0
+entrada_pot[0] => salida.DATAB
+entrada_pot[1] => salida.DATAB
+entrada_tiempo[0] => salida.DATAA
+entrada_tiempo[1] => salida.DATAA
+entrada_tiempo[2] => salida.DATAA
+entrada_tiempo[3] => salida.DATAA
+POT_TIEMP => salida.OUTPUTSELECT
+POT_TIEMP => salida.OUTPUTSELECT
+POT_TIEMP => salida.OUTPUTSELECT
+POT_TIEMP => salida.OUTPUTSELECT
+POT_TIEMP => salida.OUTPUTSELECT
+POT_TIEMP => salida.OUTPUTSELECT
+POT_TIEMP => salida.OUTPUTSELECT
+ZONA[0] => salida.DATAB
+ZONA[0] => salida.DATAA
+ZONA[1] => salida.DATAB
+ZONA[1] => salida.DATAA
+ZONA[2] => salida.DATAB
+ZONA[2] => salida.DATAA
+salida[0] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[5] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[6] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|MiniDin:inst2
+ZONA[0] => Equal0.IN5
+ZONA[0] => Equal1.IN5
+ZONA[0] => Equal2.IN5
+ZONA[1] => Equal0.IN4
+ZONA[1] => Equal1.IN4
+ZONA[1] => Equal2.IN4
+ZONA[2] => Equal0.IN3
+ZONA[2] => Equal1.IN3
+ZONA[2] => Equal2.IN3
+DIN1 => maquina.IN1
+DIN2 => maquina.IN1
+DIN3 => maquina.IN1
+encendido => POT_TIEMP.OUTPUTSELECT
+POT_TIEMP <= POT_TIEMP.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|CambioZonas:inst1
+K1 => presente_anterior~1.DATAIN
+K1 => presente~1.DATAIN
+encendido => presente_anterior.zona1.OUTPUTSELECT
+encendido => presente_anterior.zona2.OUTPUTSELECT
+encendido => presente_anterior.zona3.OUTPUTSELECT
+encendido => presente_anterior.zona0.OUTPUTSELECT
+encendido => presente.zona3.OUTPUTSELECT
+encendido => presente.zona2.OUTPUTSELECT
+encendido => presente.zona1.OUTPUTSELECT
+encendido => presente.zona0.OUTPUTSELECT
+Estado_Zona[0] <= Estado_Zona[0].DB_MAX_OUTPUT_PORT_TYPE
+Estado_Zona[1] <= Estado_Zona[1].DB_MAX_OUTPUT_PORT_TYPE
+Estado_Zona[2] <= Estado_Zona[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|Potencia:inst4
+K0 => potencia_anterior~1.DATAIN
+K0 => potencia_presente~1.DATAIN
+POT_TIEMP => Salida_Potencia1.OUTPUTSELECT
+POT_TIEMP => Salida_Potencia1.OUTPUTSELECT
+Salida_Potencia1[0] <= Salida_Potencia1.DB_MAX_OUTPUT_PORT_TYPE
+Salida_Potencia1[1] <= Salida_Potencia1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|EstablecerTiempo:inst11
+clk => cuenta[0]~reg0.CLK
+clk => cuenta[1]~reg0.CLK
+clk => cuenta[2]~reg0.CLK
+clk => cuenta[3]~reg0.CLK
+Tiempo[0] => Equal0.IN7
+Tiempo[0] => Equal1.IN3
+Tiempo[1] => Equal0.IN6
+Tiempo[1] => Equal1.IN2
+Tiempo[2] => Equal0.IN5
+Tiempo[2] => Equal1.IN1
+Tiempo[3] => Equal0.IN4
+Tiempo[3] => Equal1.IN0
+cuenta[0] <= cuenta[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta[1] <= cuenta[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta[2] <= cuenta[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta[3] <= cuenta[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|Tiempo:inst10
+K0 => Salida_Tiempo1[0]~reg0.CLK
+K0 => Salida_Tiempo1[1]~reg0.CLK
+K0 => Salida_Tiempo1[2]~reg0.CLK
+K0 => Salida_Tiempo1[3]~reg0.CLK
+K0 => \maquina:un_minuto[0].CLK
+K0 => \maquina:un_minuto[1].CLK
+K0 => \maquina:un_minuto[2].CLK
+K0 => \maquina:un_minuto[3].CLK
+POT_TIEMP => Salida_Tiempo1.OUTPUTSELECT
+POT_TIEMP => Salida_Tiempo1.OUTPUTSELECT
+POT_TIEMP => Salida_Tiempo1.OUTPUTSELECT
+POT_TIEMP => Salida_Tiempo1.OUTPUTSELECT
+POT_TIEMP => \maquina:un_minuto[0].ENA
+POT_TIEMP => \maquina:un_minuto[1].ENA
+POT_TIEMP => \maquina:un_minuto[2].ENA
+POT_TIEMP => \maquina:un_minuto[3].ENA
+Salida_Tiempo1[0] <= Salida_Tiempo1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Salida_Tiempo1[1] <= Salida_Tiempo1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Salida_Tiempo1[2] <= Salida_Tiempo1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Salida_Tiempo1[3] <= Salida_Tiempo1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|GeneradorSenal:inst6
+clk => indice[0].CLK
+clk => indice[1].CLK
+clk => indice[2].CLK
+clk => indice[3].CLK
+clk => indice[4].CLK
+clk => indice[5].CLK
+clk => indice[6].CLK
+clk => indice[7].CLK
+clk => indice[8].CLK
+clk => indice[9].CLK
+clk => indice[10].CLK
+clk => indice[11].CLK
+clk => indice[12].CLK
+clk => indice[13].CLK
+clk => indice[14].CLK
+clk => indice[15].CLK
+clk => indice[16].CLK
+clk => indice[17].CLK
+clk => indice[18].CLK
+clk => indice[19].CLK
+clk => indice[20].CLK
+clk => indice[21].CLK
+clk => indice[22].CLK
+clk => indice[23].CLK
+clk => indice[24].CLK
+clk => indice[25].CLK
+clk => indice[26].CLK
+clk => indice[27].CLK
+clk => indice[28].CLK
+clk => indice[29].CLK
+clk => indice[30].CLK
+clk => salida_variable[0].CLK
+clk => salida_variable[1].CLK
+clk => salida_variable[2].CLK
+clk => salida_variable[3].CLK
+clk => vector_temporal[0].CLK
+clk => vector_temporal[1].CLK
+clk => vector_temporal[2].CLK
+clk => vector_temporal[3].CLK
+clk => contador_reg[0].CLK
+clk => contador_reg[1].CLK
+clk => contador_reg[2].CLK
+clk => contador_reg[3].CLK
+periodo[0] => Equal1.IN59
+periodo[0] => Equal0.IN31
+periodo[1] => Equal1.IN58
+periodo[1] => Equal0.IN30
+periodo[2] => Equal1.IN57
+periodo[2] => Equal0.IN29
+periodo[3] => Equal1.IN56
+periodo[3] => Equal0.IN28
+periodo[4] => Equal1.IN55
+periodo[4] => Equal0.IN27
+periodo[5] => Equal1.IN54
+periodo[5] => Equal0.IN26
+periodo[6] => Equal1.IN53
+periodo[6] => Equal0.IN25
+periodo[7] => Equal1.IN52
+periodo[7] => Equal0.IN24
+periodo[8] => Equal1.IN51
+periodo[8] => Equal0.IN23
+periodo[9] => Equal1.IN50
+periodo[9] => Equal0.IN22
+periodo[10] => Equal1.IN49
+periodo[10] => Equal0.IN21
+periodo[11] => Equal1.IN48
+periodo[11] => Equal0.IN20
+periodo[12] => Equal1.IN47
+periodo[12] => Equal0.IN19
+periodo[13] => Equal1.IN46
+periodo[13] => Equal0.IN18
+periodo[14] => Equal1.IN45
+periodo[14] => Equal0.IN17
+periodo[15] => Equal1.IN44
+periodo[15] => Equal0.IN16
+periodo[16] => Equal1.IN43
+periodo[16] => Equal0.IN15
+periodo[17] => Equal1.IN42
+periodo[17] => Equal0.IN14
+periodo[18] => Equal1.IN41
+periodo[18] => Equal0.IN13
+periodo[19] => Equal1.IN40
+periodo[19] => Equal0.IN12
+periodo[20] => Equal1.IN39
+periodo[20] => Equal0.IN11
+periodo[21] => Equal1.IN38
+periodo[21] => Equal0.IN10
+periodo[22] => Equal1.IN37
+periodo[22] => Equal0.IN9
+periodo[23] => Equal1.IN36
+periodo[23] => Equal0.IN8
+periodo[24] => Equal1.IN35
+periodo[24] => Equal0.IN7
+periodo[25] => Equal1.IN34
+periodo[25] => Equal0.IN6
+periodo[26] => Equal1.IN33
+periodo[26] => Equal0.IN5
+periodo[27] => Equal1.IN32
+periodo[27] => Equal0.IN4
+periodo[28] => Equal1.IN31
+periodo[28] => Equal0.IN3
+periodo[29] => Equal1.IN30
+periodo[29] => Equal0.IN2
+periodo[30] => Equal1.IN29
+periodo[30] => Equal0.IN1
+periodo[31] => Equal1.IN28
+periodo[31] => Equal0.IN0
+salida[0] <= salida_variable[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida_variable[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida_variable[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida_variable[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PlacaDeInduccion|EstablecerPotencia:inst
+T[1] => Mux0.IN5
+T[1] => Mux1.IN5
+T[1] => Mux2.IN5
+T[1] => Mux3.IN5
+T[1] => periodo_out[3].DATAIN
+T[0] => Mux0.IN4
+T[0] => Mux1.IN4
+T[0] => Mux2.IN4
+T[0] => Mux3.IN4
+periodo_out[0] <= <GND>
+periodo_out[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+periodo_out[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+periodo_out[3] <= T[1].DB_MAX_OUTPUT_PORT_TYPE
+periodo_out[4] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+periodo_out[5] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+periodo_out[6] <= <GND>
+periodo_out[7] <= <GND>
+periodo_out[8] <= <GND>
+periodo_out[9] <= <GND>
+periodo_out[10] <= <GND>
+periodo_out[11] <= <GND>
+periodo_out[12] <= <GND>
+periodo_out[13] <= <GND>
+periodo_out[14] <= <GND>
+periodo_out[15] <= <GND>
+periodo_out[16] <= <GND>
+periodo_out[17] <= <GND>
+periodo_out[18] <= <GND>
+periodo_out[19] <= <GND>
+periodo_out[20] <= <GND>
+periodo_out[21] <= <GND>
+periodo_out[22] <= <GND>
+periodo_out[23] <= <GND>
+periodo_out[24] <= <GND>
+periodo_out[25] <= <GND>
+periodo_out[26] <= <GND>
+periodo_out[27] <= <GND>
+periodo_out[28] <= <GND>
+periodo_out[29] <= <GND>
+periodo_out[30] <= <GND>
+periodo_out[31] <= <GND>
+
+

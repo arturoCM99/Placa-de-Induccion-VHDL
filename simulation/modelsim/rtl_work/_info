@@ -1,0 +1,350 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Luis\Downloads\PlacaDeInduccion\simulation\modelsim
+Ecambiozonas
+Z1 w1704893453
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\Luis\Downloads\PlacaDeInduccion\simulation\modelsim
+Z7 8C:/Users/Luis/Downloads/PlacaDeInduccion/CambioZonas.vhd
+Z8 FC:/Users/Luis/Downloads/PlacaDeInduccion/CambioZonas.vhd
+l0
+L5
+VAO3hjW9S_^2z3?0a_Thzi3
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1704897921.605000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/CambioZonas.vhd|
+Z12 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/CambioZonas.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 N2kHzahWSg>>Mco:0_BWG0
+!i10b 1
+Adescripcion
+R2
+R3
+R4
+R5
+DEx4 work 11 cambiozonas 0 22 AO3hjW9S_^2z3?0a_Thzi3
+l20
+L10
+VRQfJ6f]lmzPXVifm5YUhZ2
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 G80T;G:JFbD[[<CYc>Mmb1
+!i10b 1
+Eclasificador
+Z15 w1704895666
+R4
+R5
+R6
+Z16 8C:/Users/Luis/Downloads/PlacaDeInduccion/Clasificador.vhd
+Z17 FC:/Users/Luis/Downloads/PlacaDeInduccion/Clasificador.vhd
+l0
+L4
+Vo:Q0PCLX=7CY28477Ak033
+!s100 cIEB`?iA``9Ka`:?8cPB02
+R9
+31
+!i10b 1
+Z18 !s108 1704897922.070000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/Clasificador.vhd|
+Z20 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/Clasificador.vhd|
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 12 clasificador 0 22 o:Q0PCLX=7CY28477Ak033
+l17
+L16
+V6N>B>_1@dAon=6Xn0GNgW0
+!s100 bGEo6ECo:Dl=QkD>E3gXT0
+R9
+31
+!i10b 1
+R18
+R19
+R20
+R13
+R14
+Eestablecerpotencia
+Z21 w1704489681
+R3
+R2
+R4
+R5
+R6
+Z22 8C:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerPotencia.vhd
+Z23 FC:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerPotencia.vhd
+l0
+L6
+VajQ3:^ob6_J2WD[kDUzD43
+R9
+31
+Z24 !s108 1704897921.719000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerPotencia.vhd|
+Z26 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerPotencia.vhd|
+R13
+R14
+!s100 b=^J6S;2n_hPG_]@X6KmL3
+!i10b 1
+Abehavioral
+R3
+R2
+R4
+R5
+DEx4 work 18 establecerpotencia 0 22 ajQ3:^ob6_J2WD[kDUzD43
+l19
+L13
+V4`Pgcm^mWfM?kSnICz4j:3
+R9
+31
+R24
+R25
+R26
+R13
+R14
+!s100 0fmdeVe7:fMRmHTlb0hKh2
+!i10b 1
+Eestablecertiempo
+Z27 w1704498414
+Z28 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R3
+R2
+R4
+R5
+R6
+Z29 8C:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerTiempo.vhd
+Z30 FC:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerTiempo.vhd
+l0
+L7
+VALG?=fhEDEWSCAEk:;ZQ92
+R9
+31
+Z31 !s108 1704897921.843000
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerTiempo.vhd|
+Z33 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/EstablecerTiempo.vhd|
+R13
+R14
+!s100 c?BDFc`_NHRHo<:[Dd9HY0
+!i10b 1
+Abehavioral
+R28
+R3
+R2
+R4
+R5
+DEx4 work 16 establecertiempo 0 22 ALG?=fhEDEWSCAEk:;ZQ92
+l17
+L15
+VQZaR@XYah]I<8Zn5^JGGU3
+R9
+31
+R31
+R32
+R33
+R13
+R14
+!s100 XEgL`nm0La`ZznVkKV8OP3
+!i10b 1
+Egeneradorsenal
+Z34 w1704895900
+R5
+R4
+Z35 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R6
+Z36 8C:/Users/Luis/Downloads/PlacaDeInduccion/GeneradorSenal.vhd
+Z37 FC:/Users/Luis/Downloads/PlacaDeInduccion/GeneradorSenal.vhd
+l0
+L5
+VaR;[IAz<_E1eSPcR_CUAD1
+R9
+31
+Z38 !s108 1704897921.958000
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/GeneradorSenal.vhd|
+Z40 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/GeneradorSenal.vhd|
+R13
+R14
+!s100 BR1@A`hBLhU;3z<RfMC1P2
+!i10b 1
+Abehavioral
+R5
+R4
+R35
+DEx4 work 14 generadorsenal 0 22 aR;[IAz<_E1eSPcR_CUAD1
+l17
+L11
+Vfg1k_HG=QDjcXz3BZmNeW1
+R9
+31
+R38
+R39
+R40
+R13
+R14
+!s100 7;[gSX0d82jC94EEJi<8e0
+!i10b 1
+Ejoiner
+Z41 w1704477065
+R5
+R4
+R35
+R6
+Z42 8C:/Users/Luis/Downloads/PlacaDeInduccion/Joiner.vhd
+Z43 FC:/Users/Luis/Downloads/PlacaDeInduccion/Joiner.vhd
+l0
+L5
+V=L6[>OBCd8<hIkbR^M`M82
+R9
+31
+Z44 !s108 1704897922.014000
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/Joiner.vhd|
+Z46 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/Joiner.vhd|
+R13
+R14
+!s100 :lMB@?4DdRCcMFlLV4>Kg1
+!i10b 1
+Abehavioral
+R5
+R4
+R35
+DEx4 work 6 joiner 0 22 =L6[>OBCd8<hIkbR^M`M82
+l15
+L14
+V2<jL0ZKW8JFQX:8G_=o2<2
+R9
+31
+R44
+R45
+R46
+R13
+R14
+!s100 WPBUW4joTiLO^X;<Ck]>N2
+!i10b 1
+Eminidin
+Z47 w1704897167
+R2
+R3
+R4
+R5
+R6
+Z48 8C:/Users/Luis/Downloads/PlacaDeInduccion/MiniDin.vhd
+Z49 FC:/Users/Luis/Downloads/PlacaDeInduccion/MiniDin.vhd
+l0
+L5
+VF2VAlBT`RHYC6LeABB4kM0
+R9
+31
+Z50 !s108 1704897921.902000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/MiniDin.vhd|
+Z52 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/MiniDin.vhd|
+R13
+R14
+!s100 adYaBeEh<HaOCB]_R_lfk0
+!i10b 1
+Adescripcion
+R2
+R3
+R4
+R5
+DEx4 work 7 minidin 0 22 F2VAlBT`RHYC6LeABB4kM0
+l18
+L17
+Vk[`4VnE_26TSAaO?XglJ^3
+R9
+31
+R50
+R51
+R52
+R13
+R14
+!s100 SiXiz[bgh?gaQL^73`W8c0
+!i10b 1
+Epotencia
+Z53 w1704885683
+R2
+R3
+R4
+R5
+R6
+Z54 8C:/Users/Luis/Downloads/PlacaDeInduccion/Potencia.vhd
+Z55 FC:/Users/Luis/Downloads/PlacaDeInduccion/Potencia.vhd
+l0
+L5
+V;Wh8@Tc4i>niFDCMcAKO<1
+R9
+31
+Z56 !s108 1704897921.664000
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/Potencia.vhd|
+Z58 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/Potencia.vhd|
+R13
+R14
+!s100 hTiHCJK_CZ0^a3jI5X`381
+!i10b 1
+Adescripcion
+R2
+R3
+R4
+R5
+DEx4 work 8 potencia 0 22 ;Wh8@Tc4i>niFDCMcAKO<1
+l26
+L17
+VUeI3H:4HNiTS]b8g134_E0
+R9
+31
+R56
+R57
+R58
+R13
+R14
+!s100 HCD0KW^PV0P0Rmh^zMF3W0
+!i10b 1
+Etiempo
+Z59 w1704895551
+R2
+R3
+R4
+R5
+R6
+Z60 8C:/Users/Luis/Downloads/PlacaDeInduccion/Tiempo.vhd
+Z61 FC:/Users/Luis/Downloads/PlacaDeInduccion/Tiempo.vhd
+l0
+L5
+V]EEB]coNHEI0lf`BgXiz>2
+R9
+31
+Z62 !s108 1704897921.787000
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Downloads/PlacaDeInduccion/Tiempo.vhd|
+Z64 !s107 C:/Users/Luis/Downloads/PlacaDeInduccion/Tiempo.vhd|
+R13
+R14
+!s100 >L7NmYYRnXdAYlV9]S>3o1
+!i10b 1
+Adescripcion
+R2
+R3
+R4
+R5
+DEx4 work 6 tiempo 0 22 ]EEB]coNHEI0lf`BgXiz>2
+l15
+L12
+V3ID8z_^?];i:c8n:dH6PU0
+R9
+31
+R62
+R63
+R64
+R13
+R14
+!s100 `kTbgS[5a9;LMlf_G;_=V2
+!i10b 1

@@ -1,0 +1,28 @@
+
+State Machine - |PlacaDeInduccion|Potencia:inst4|potencia_anterior
+Name potencia_anterior.potencia3 potencia_anterior.potencia2 potencia_anterior.potencia1 potencia_anterior.potencia0 
+potencia_anterior.potencia0 0 0 0 0 
+potencia_anterior.potencia1 0 0 1 1 
+potencia_anterior.potencia2 0 1 0 1 
+potencia_anterior.potencia3 1 0 0 1 
+
+State Machine - |PlacaDeInduccion|Potencia:inst4|potencia_presente
+Name potencia_presente.potencia3 potencia_presente.potencia2 potencia_presente.potencia1 potencia_presente.potencia0 
+potencia_presente.potencia0 0 0 0 0 
+potencia_presente.potencia1 0 0 1 1 
+potencia_presente.potencia2 0 1 0 1 
+potencia_presente.potencia3 1 0 0 1 
+
+State Machine - |PlacaDeInduccion|CambioZonas:inst1|presente_anterior
+Name presente_anterior.zona3 presente_anterior.zona2 presente_anterior.zona1 presente_anterior.zona0 
+presente_anterior.zona0 0 0 0 0 
+presente_anterior.zona1 0 0 1 1 
+presente_anterior.zona2 0 1 0 1 
+presente_anterior.zona3 1 0 0 1 
+
+State Machine - |PlacaDeInduccion|CambioZonas:inst1|presente
+Name presente.zona3 presente.zona2 presente.zona1 presente.zona0 
+presente.zona0 0 0 0 0 
+presente.zona1 0 0 1 1 
+presente.zona2 0 1 0 1 
+presente.zona3 1 0 0 1 
