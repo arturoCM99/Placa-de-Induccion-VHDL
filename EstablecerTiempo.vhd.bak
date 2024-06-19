@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity EstablecerTiempo is
+    Port ( 
+           clk     : in STD_LOGIC;
+           Tiempo  : in std_logic_vector(0 to 3);
+			  
+         );
+end EstablecerTiempo;
+
+architecture Behavioral of EstablecerTiempo is
+
+begin
+    proceso_generador: process(clk)
+	 VARIABLE cuenta: std_logic_vector(0 TO 3) := "0000";
+    begin
+        if rising_edge(clk) AND cuenta = Tiempo then
+				cuenta:= cuenta + 1
+			 
+    end process proceso_generador;
+
+end Behavioral;

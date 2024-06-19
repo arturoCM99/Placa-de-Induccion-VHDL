@@ -1,0 +1,36 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Clasificador is
+    Port ( 
+        entrada1 : in STD_LOGIC_VECTOR(3 downto 0);
+        entrada2 : in STD_LOGIC_VECTOR(3 downto 0);
+        entrada3 : in STD_LOGIC_VECTOR(3 downto 0);
+        entrada4 : in STD_LOGIC_VECTOR(3 downto 0);
+        entrada5 : in STD_LOGIC_VECTOR(3 downto 0);
+        entrada6 : in STD_LOGIC_VECTOR(3 downto 0);
+        salida   : out STD_LOGIC_VECTOR(3 downto 0);
+    );
+end Clasificador;
+
+architecture Behavioral of Clasificador is
+begin
+    process
+    begin
+        if entrada1 /= "ZZZZ" then
+            salida <= entrada1;
+        elsif entrada2 /= "ZZZZ" then
+            salida <= entrada2;
+        elsif entrada3 /= "ZZZZ" then
+            salida <= entrada3;
+        elsif entrada4 /= "ZZZZ" then
+            salida <= entrada4;
+        elsif entrada5 /= "ZZZZ" then
+            salida <= entrada5;
+        elsif entrada6 /= "ZZZZ" then
+            salida <= entrada6;
+        else
+            salida <= "ZZZZ"; 
+        end if;
+    end process;
+end Behavioral;

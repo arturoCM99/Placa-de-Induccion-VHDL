@@ -1,0 +1,36 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+ENTITY MiniDin IS
+PORT (
+	 ZONA: IN std_logic_vector(0 TO 3);
+    Z1: BUFFER BOOLEAN := true;
+    Z2: BUFFER BOOLEAN := true;
+    Z3: BUFFER BOOLEAN := true;
+    encendido: IN BOOLEAN  -- Agregado: Necesitas declarar la entrada "encendido"
+);
+END MiniDin;
+
+ARCHITECTURE descripcion OF MiniDin IS
+BEGIN
+    maquina: PROCESS(encendido,ZONA) -- Cambiado: Se ha cambiado K0 por encendido
+    BEGIN
+        IF encendido = true THEN
+            IF ZONA = "0001" THEN
+					  Z2 <= null;
+					  Z3 <= null;
+            END IF;
+
+            IF ZONA = "0010" THEN
+					  Z1 <= null;
+					  Z3 <= null;
+            END IF;
+
+            IF ZONA = "1000" THEN
+					  Z2 <= null;
+					  Z1 <= null;
+            END IF;
+        END IF;
+    END PROCESS maquina;
+END descripcion;

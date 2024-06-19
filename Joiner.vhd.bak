@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Joiner is
+    Port ( 
+        vector_potencia_tiempo : in STD_LOGIC_VECTOR(3 downto 0);
+        vector_zona : in STD_LOGIC_VECTOR(2 downto 0);
+        vector_resultante : out STD_LOGIC_VECTOR(6 downto 0)
+    );
+end Joiner;
+
+architecture Behavioral of Joiner is
+begin
+    process
+    begin
+        vector_resultante <= vector_potencia_tiempo & vector_zona;
+    end process;
+end Behavioral;
+

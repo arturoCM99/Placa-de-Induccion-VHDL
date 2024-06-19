@@ -1,0 +1,56 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+ENTITY Potencia IS
+PORT (K1: IN std_logic;Zona: IN std_logic_vector(0 TO 3);Salida_Potencia: OUT std_logic_vector(0 TO 1));
+END Potencia;
+
+ARCHITECTURE descripcion OF Potencia
+	IS TYPE estado IS (potencia0,potencia1,potencia2,potencia3);
+	CONSTANT Sin_potencia: std_logic_vector(0 TO 1):="0000";
+	CONSTANT Potencia_baja: std_logic_vector(0 TO 1):="0001";
+	CONSTANT Potencia_media: std_logic_vector(0 TO 1):="0010";
+	CONSTANT Potencia_alta: std_logic_vector(0 TO 1):="0011";
+	SIGNAL potencia_presente: estado:=zona0;
+	SIGNAL potencia_anterior: estado:=zona0;
+	SIGNAL encendido: boolean; --Encendido 
+
+
+BEGIN
+maquina: PROCESS(K1) -- Lo primero es definir la secuencia mediante una máquina de estados: BEGIN
+BEGIN
+	IF encendido= true
+	THEN 
+		IF K1='1' AND K1'event
+			THEN CASE potencia_presente IS
+				WHEN potencia1=>
+						potencia_presente<= potencia2;
+				WHEN zona2=>
+						potencia_presente<= potencia3;
+				WHEN zona3=>
+						potencia_presente<=potencia0;
+				WHEN zona0=>
+						potencia_presente<= potencia1;
+			END CASE;
+			potencia_anterior<= potencia_presente;
+		END IF;
+	END IF;
+	
+END PROCESS maquina;
+	
+salida: PROCESS(presente) -- Activación de las salidas. 
+BEGIN
+	CASE presente IS 
+
+      WHEN potencia1=>
+         Salida_Potencia<=Primera_zona;
+      WHEN potencia2=>
+         Salida_Potencia<=Segunda_Zona;
+      WHEN potencia3=> 
+         Salida_Potencia<=Tercera_zona;
+		WHEN potencia0=>
+			Salida_Potencia<=Zona_apagada;
+	END CASE;
+END PROCESS salida;
+END;

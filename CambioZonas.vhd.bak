@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity Practica8 is
+end Practica8;
+
+architecture contador_asc of Practica8 is
+  component Contador is
+    port (
+      A: in std_logic;
+      Avance_Retroceso: in std_logic;
+      Reset: in std_logic;
+      Permiso: in std_logic;
+      Q: out STD_LOGIC_VECTOR(6 downto 0);
+      Ok_posicion: buffer std_logic
+    );
+  end component;
